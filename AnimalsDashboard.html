@@ -6,6 +6,7 @@
 
 	<title>Animal Information</title>
 	<style>
+	/* This is a format on how the tables are to appear | THIS IS UR CSS BLOCK */
 		table
 		{
 			border-collapse: collapse;
@@ -28,12 +29,21 @@
 </head>
 <body>
 	<h1>Animal Information</h1>
+
 	<div id="animal-table"></div>
+	<!-- This is a container with the name of "animal table", which would later be manipulated by our javascript block | REMEMBER that this is not a variable but a container!!! -->
 
 	<script>
+	//This is where we make the function of our code | THIS IS OUR JAVASCRIPT BLOCK
+	
+	//This is the block wherein we make our table
 	let tableHTML = '<table>';
+
+	//here we can see that we make the table with headers with the <th> elements
 	tableHTML += '<tr><th>Animal ID</th><th>Animal Name</th><th>Owner Name</th><th>Weight</th><th>Age</th></tr>';
 
+	//this is where the code makes an array wherein it contains pet  information
+	//THIS REQUIRES TO BE LOOPED PROPERLY SO THAT WE CAN DISPLAY IT ON OUR WEBSITE
 	const animals = 
 	[
 		{ id: 1, name: "Fluffy", owner: "Alice", weight: 12, age: 3 },
@@ -41,6 +51,8 @@
 	];
 
 	tableHTML += '</table>';
+
+	//This is where we inject our created table into the "animal-table" container that we made 
 	document.getElementById('animal-table').innerHTML = tableHTML;
 	</script>
 
